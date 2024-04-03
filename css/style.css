@@ -1,0 +1,622 @@
+:root {
+    --primary: #000;
+    --secondary: #3AB54A;
+    --button: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: white;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 6%;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar.scroll {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.navbar .navbar-logo img {
+    width: 5.5rem;
+}
+
+.navbar .navbar-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.navbar .navbar-logo a {
+    color: var(--secondary);
+    text-decoration: none;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.navbar .navbar-nav a {
+    color: var(--primary);
+    display: inline-block;
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin: 0 1.5rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--secondary);
+}
+
+.navbar #hamburger-menu {
+    display: none;
+}
+
+/* Hero Section */
+.hero {
+    background-color: var(--background);
+    min-height: 100vh;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 6%;
+    padding-top: 10rem;
+}
+
+.hero .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.hero .content h1 {
+    color: var(--primary);
+    font-size: 3.5rem;
+    padding-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.hero .content p{
+    color: var(--primary);
+    font-size: 1.7rem;
+    padding-bottom: 5rem;
+    font-weight: 300;
+}
+
+.hero .content .tablet-view {
+    display: none;
+}
+
+.hero .content a {
+    color: var(--button);
+    font-size: 2rem;
+    font-weight: 500;
+    background-color: var(--secondary);
+    padding: 1.2rem 6rem;
+    border-radius: 0.5rem;
+}
+
+.hero .content a:hover,
+.menu-kami .content .keterangan a:hover {
+    color: var(--secondary);
+    background-color: var(--button);
+    border: 3px solid var(--secondary);
+    font-weight: 500;
+}
+
+.hero .image {
+    width: 60%;
+}
+
+.hero .image img {
+    width: 45%;
+    margin-left: 20rem;
+}
+
+/* Tentang Kami */
+.tentang-kami,
+.menu-kami,
+.keunggulan-produk-kami {
+    padding: 5rem 6% 4rem;
+}
+
+.tentang-kami .judul,
+.menu-kami .judul,
+.keunggulan-produk-kami .judul {
+    text-align: center;
+    margin-bottom: 7rem;
+}
+
+.tentang-kami .judul h2,
+.menu-kami .judul h2,
+.keunggulan-produk-kami .judul h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+.tentang-kami .judul p,
+.menu-kami .judul p,
+.keunggulan-produk-kami .judul p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 0 5%;
+}
+
+.tentang-kami .content,
+.menu-kami .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 5rem;
+}
+
+.tentang-kami .content .image {
+    text-align: right;
+}
+
+.tentang-kami .content .image img {
+    margin-right: 2rem;
+    width: 60%;
+}
+
+.tentang-kami .content .keterangan {
+    display: block;
+}
+
+.tentang-kami .content .keterangan h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    padding-bottom: 1.5rem;
+}
+
+.tentang-kami .content .keterangan p {
+    font-size: 1.3rem;
+    font-weight: 300;
+    line-height: 2;
+}
+
+/* Menu Kami */
+.menu-kami {
+    background-color: var(--background);
+}
+
+.menu-kami .content {
+    gap: 0;
+}
+
+.menu-kami .content .keterangan {
+    padding-left: 10%;
+}
+
+.menu-kami .content .keterangan h2 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    padding-bottom: 1.2rem;
+}
+
+.menu-kami .content .keterangan p {
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 2;
+    padding-bottom: 1.5rem;
+}
+
+.menu-kami .content .keterangan h3 {
+    font-size: 2.5rem;
+    font-weight:600;
+    padding-bottom: 2.5rem;
+}
+
+.menu-kami .content .keterangan a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    background-color: var(--secondary);
+    border-radius: 0.5rem;
+}
+
+.menu-kami .content .keterangan a p.hover,
+footer .container .description.menu a:hover,
+footer .container .description.pt .socials a p:hover {
+    color: var(--secondary);
+}
+
+.menu-kami .content .keterangan .image {
+    display: none;
+}
+
+.menu-kami .content .keterangan a img {
+    width: 3.5rem;
+    margin-left: 2rem;
+}
+
+.menu-kami .content .keterangan a p {
+    color: var(--button);
+    font-size: 1.6rem;
+    padding: 1.5rem;
+    font-weight: 600;
+}
+
+.menu-kami .content .image{
+    text-align: center;
+}
+
+/* Keunggulan Produk Kami */
+.keunggulan-produk-kami .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 8rem 2rem;
+}
+
+.keunggulan-produk-kami .content .card {
+    text-align: center;
+}
+
+.keunggulan-produk-kami .content .card img {
+    height: 70%;
+    padding-bottom: 1rem;
+}
+
+.keunggulan-produk-kami .content .card .keterangan h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
+}
+
+.keunggulan-produk-kami .content .card .keterangan p {
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 2;
+    padding: 0 5%;
+}
+
+/* Footer */
+footer {
+    border-top: 2px solid var(--primary);
+    width: 100%;
+    color: var(--primary);
+    margin-top: 5rem;
+    padding: 2rem 6% ;
+    text-align: left;
+    background-color: var(--background);
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 5rem;
+}
+
+footer .container .description {
+    display: block;
+}
+
+footer .container .description.pt {
+    padding-top: 0.5rem;
+}
+
+footer .container .description .logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.3rem;
+    padding-bottom: 1.5rem;
+}
+
+footer .container .description .logo img {
+    width: 12%;
+}
+
+footer .container .description .logo h2,
+footer .container .description h2 .cleatea {
+    color: var(--secondary);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+footer .container .description h2 {
+    color: var(--primary);
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+footer .container .description p,
+footer .container .description.menu a {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2;
+    color: var(--primary);
+}
+
+footer .container .description.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+footer .container .description.menu a {
+    padding-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+footer .container .description.pt {
+    padding-left: 25%;
+}
+
+footer .container .description.menu.pt {
+    padding-left: 35%;
+}
+
+footer .container .description.pt .socials a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+footer .container .description.pt .socials img {
+    height: 3rem;
+}
+
+footer .container .description.pt .socials p {
+    font-weight: 400;
+    color: var(--primary);
+    font-size: 1.5rem;
+}
+
+/* Copyright */
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding-top: 1.2rem;
+    color: var(--button);
+    background-color: var(--secondary);
+    height: 6rem;
+    font-size: 2rem;
+}
+
+/* Media Queries */
+@media (max-width: 1669px) {
+    html {
+        font-size: 90%;
+    }
+}
+
+@media (max-width: 1654px) {
+    footer .container .description.pt {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 1600px) {
+    html {
+        font-size: 85%;
+    }
+
+    footer .container .description.pt {
+        padding-left: 25%;
+    }
+}
+
+@media (max-width: 1500px) {
+    html {
+        font-size: 80%;
+    }
+}
+
+@media (max-width: 1563px) {
+    footer .container {
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    }
+}
+
+@media (max-width: 1400px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+@media (max-width: 1350px) {
+    html {
+        font-size: 70%;
+    }
+}
+
+@media (max-width: 1270px) {
+    html {
+        font-size: 65%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .navbar .navbar-logo a {
+        font-size: 3rem;
+    }
+
+    .navbar #hamburger-menu {
+        color: var(--primary);
+        display: inline-block;
+    }
+
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: var(--button);
+        width: 30rem;
+        height: 100vh;
+        transition: 0.3s;
+        overflow-x: hidden;
+    }
+
+    .navbar .navbar-nav.active {
+        right: 0;
+    }
+
+    .navbar .navbar-nav a {
+        color: var(--primary);
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 3rem;
+    } 
+
+    .hero {
+        padding-top: 12rem;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10rem;
+    }
+
+    .hero .desktop-view {
+        display: none;
+    }
+
+    .hero .content .tablet-view {
+        display: inline-block;
+    }
+
+    .hero .content {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero .content p {
+        padding-bottom: 1rem;
+    }
+
+    .hero .content img {
+        padding-left: 4rem;
+        padding-bottom: 5rem;
+    }
+
+    .hero .content a {
+        width: 70%;
+        padding: 2rem 0;
+        height: 7rem;
+    }
+}
+
+@media (max-width: 1022px) {
+    footer .container .description.menu {
+        justify-self: center;
+    }
+
+    .tentang-kami .content, 
+    .menu-kami .content {
+        grid-template-columns: 1fr;
+        gap: 5rem;
+    }
+
+    .tentang-kami .content .image {
+        text-align: center;
+    }
+
+    .tentang-kami .content .image img {
+        width: 40%;
+        margin: 0;
+    }
+
+    .menu-kami .content .keterangan {
+        padding-left: 0;
+    }
+
+    .menu-kami .content .image {
+        padding-left: 8%;
+    }
+
+    .menu-kami .judul {
+        margin-bottom: 4rem;
+    }
+
+    .menu-kami .content .image {
+        display: none;
+    }
+
+    .menu-kami .content .keterangan .image {
+        display: block;
+        margin: 2rem auto 6rem;
+    }
+
+    .menu-kami .content .keterangan a {
+        width: auto;
+    }
+
+    footer .container .description.pt {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 990px) {
+    html {
+        font-size: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 668px) {
+    html {
+        font-size: 50%;
+    }
+} 
+
+@media (max-width: 550px) {
+    footer .container {
+        grid-template-columns: 1fr;
+    }
+    
+    footer .container .description {
+        text-align: center;
+    }
+
+    footer .container .description.menu.pt {
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer .container .description .logo,
+    footer .container .description.pt .socials a {
+        justify-content: center;
+    }
+}
